@@ -30,7 +30,6 @@ class MovieViewSet(viewsets.ModelViewSet):
             user = User.objects.get(id=1)
 
             try:
-                print('TRYING')
                 rating = Rating.objects.get(user=user.id, movie=movie.id)
                 rating.stars = stars
                 rating.save()
